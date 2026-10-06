@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links Importantes | Perfil Profissional</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#6C5CE7',
+                            hover: '#5B4BC4',
+                            light: '#8A4FFF',
+                            accent: '#A29BFE'
+                        },
+                        darkbg: {
+                            DEFAULT: '#0F0F12',
+                            card: '#16161D',
+                            hover: '#1F1F28'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'glow': '0 0 20px -3px rgba(108, 92, 231, 0.4)',
+                        'glow-lg': '0 0 30px -2px rgba(138, 79, 255, 0.5)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .avatar-glow {
+            position: relative;
+        }
+        .avatar-glow::before {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            right: -4px;
+            bottom: -4px;
+            background: linear-gradient(135deg, #6C5CE7, #8A4FFF, #FF7675);
+            border-radius: 50%;
+            z-index: 0;
+            animation: pulse-glow 4s infinite alternate;
+        }
+
+        @keyframes pulse-glow {
+            0% {
+                opacity: 0.7;
+                transform: scale(0.98);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1.02);
+            }
+        }
+
+        .link-card {
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .link-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .toast-slide {
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s ease;
+        }
+
+        /* Glassmorphism subtle effects */
+        .glass-panel {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 dark:bg-darkbg dark:text-gray-100 min-h-screen flex flex-col justify-between antialiased selection:bg-primary selection:text-white">
+
+    <div class="fixed top-4 right-4 z-50">
+        <button id="themeToggle" class="p-3 rounded-full bg-white/80 dark:bg-darkbg-card/80 border border-gray-200 dark:border-gray-800 shadow-md text-gray-700 dark:text-gray-200 hover:text-primary dark:hover:text-primary-light transition-all duration-200 focus:outline-none glass-panel" aria-label="Alternar Tema">
+            <i id="themeIcon" class="fas fa-moon text-lg"></i>
+        </button>
+    </div>
+
+    <!-- Main Container -->
+    <main class="w-full max-w-xl mx-auto px-4 py-12 flex-grow flex flex-col items-center">
+
+        <!-- Profile Header Section -->
+        <header class="text-center mb-8 flex flex-col items-center w-full">
+            <div class="avatar-glow mb-5">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=400&auto=format&fit=crop" 
+                     alt="Foto de Perfil" 
+                     class="relative z-10 w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-4 border-white dark:border-darkbg shadow-xl"
+                     onerror="this.src='https://placehold.co/128x128/6C5CE7/FFFFFF?text=Perfil'">
+            </div>
+            
+            <h1 class="text-2xl sm:text-3xl font-bold tracking-tight mb-1 flex items-center justify-center gap-2">
+                Ana Silva 
+                <i class="fas fa-check-circle text-primary text-lg" title="Perfil Verificado"></i>
+            </h1>
+            
+            <p class="text-primary dark:text-primary-accent font-medium text-sm sm:text-base mb-3">
+                Designer UI/UX & Desenvolvedora Frontend
+            </p>
+            
+            <p class="text-gray-600 dark:text-gray-400 text-sm max-w-md leading-relaxed px-2">
+                Criando experiências digitais intuitivas, elegantes e funcionais. Disponível para projetos e consultoria.
+            </p>
+
+            <!-- Social Media Icons Bar -->
+            <div class="flex items-center justify-center gap-3 mt-5">
+                <a href="https://instagram.com" target="_blank" rel="noopener font-medium" aria-label="Instagram" class="w-10 h-10 rounded-full bg-gray-200/80 dark:bg-darkbg-card hover:bg-primary hover:text-white dark:hover:bg-primary text-gray-700 dark:text-gray-300 flex items-center justify-center transition-all duration-200 border border-gray-300/50 dark:border-gray-800">
+                    <i class="fab fa-instagram text-lg"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn" class="w-10 h-10 rounded-full bg-gray-200/80 dark:bg-darkbg-card hover:bg-primary hover:text-white dark:hover:bg-primary text-gray-700 dark:text-gray-300 flex items-center justify-center transition-all duration-200 border border-gray-300/50 dark:border-gray-800">
+                    <i class="fab fa-linkedin-in text-lg"></i>
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub" class="w-10 h-10 rounded-full bg-gray-200/80 dark:bg-darkbg-card hover:bg-primary hover:text-white dark:hover:bg-primary text-gray-700 dark:text-gray-300 flex items-center justify-center transition-all duration-200 border border-gray-300/50 dark:border-gray-800">
+                    <i class="fab fa-github text-lg"></i>
+                </a>
+                <a href="https://wa.me/5500000000000" target="_blank" rel="noopener" aria-label="WhatsApp" class="w-10 h-10 rounded-full bg-gray-200/80 dark:bg-darkbg-card hover:bg-primary hover:text-white dark:hover:bg-primary text-gray-700 dark:text-gray-300 flex items-center justify-center transition-all duration-200 border border-gray-300/50 dark:border-gray-800">
+                    <i class="fab fa-whatsapp text-lg"></i>
+                </a>
+                <a href="mailto:contato@exemplo.com" aria-label="E-mail" class="w-10 h-10 rounded-full bg-gray-200/80 dark:bg-darkbg-card hover:bg-primary hover:text-white dark:hover:bg-primary text-gray-700 dark:text-gray-300 flex items-center justify-center transition-all duration-200 border border-gray-300/50 dark:border-gray-800">
+                    <i class="far fa-envelope text-lg"></i>
+                </a>
+            </div>
+        </header>
+
+        <!-- Links List Section -->
+        <section class="w-full space-y-4">
+
+            <!-- Destaque / Featured Link -->
+            <div class="relative group">
+                <span class="absolute -top-2.5 right-4 z-20 bg-gradient-to-r from-primary to-primary-light text-white text-xs font-semibold px-2.5 py-0.5 rounded-full shadow-sm uppercase tracking-wider">
+                    Destaque
+                </span>
+                <a href="#portfolio" class="link-card w-full p-4 rounded-xl bg-gradient-to-r from-primary/10 via-primary/5 to-transparent border-2 border-primary/40 dark:border-primary/50 flex items-center justify-between shadow-glow hover:shadow-glow-lg dark:bg-darkbg-card text-gray-900 dark:text-white font-semibold">
+                    <div class="flex items-center gap-3.5">
+                        <div class="w-10 h-10 rounded-lg bg-primary text-white flex items-center justify-center text-lg shadow-md">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="text-left">
+                            <span class="block text-base leading-snug">Meu Portfólio Principal</span>
+                            <span class="block text-xs font-normal text-gray-500 dark:text-gray-400">Confira meus últimos trabalhos e cases</span>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-400 group-hover:text-primary group-hover:translate-x-1 transition-all"></i>
+                </a>
+            </div>
+
+            <!-- Categoria: Serviços & Agendamentos -->
+            <div class="pt-2">
+                <h2 class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-3 px-1">
+                    Atendimento & Consultoria
+                </h2>
+
+                <div class="space-y-3">
+                    <a href="#agendar" class="link-card w-full p-3.5 rounded-xl bg-white dark:bg-darkbg-card border border-gray-200 dark:border-gray-800/80 flex items-center justify-between hover:border-primary/50 dark:hover:border-primary/50 shadow-sm text-gray-800 dark:text-gray-200 font-medium group">
+                        <div class="flex items-center gap-3.5">
+                            <div class="w-9 h-9 rounded-lg bg-gray-100 dark:bg-darkbg-hover text-primary flex items-center justify-center text-base group-hover:bg-primary group-hover:text-white transition-colors">
+                                <i class="far fa-calendar-check"></i>
+                            </div>
+                            <span class="text-sm sm:text-base">Agendar Consulta / Reunião</span>
+                        </div>
+                        <i class="fas fa-arrow-up-right-from-square text-xs text-gray-400 group-hover:text-primary transition-colors"></i>
+                    </a>
+
+                    <a href="#servicos" class="link-card w-full p-3.5 rounded-xl bg-white dark:bg-darkbg-card border border-gray-200 dark:border-gray-800/80 flex items-center justify-between hover:border-primary/50 dark:hover:border-primary/50 shadow-sm text-gray-800 dark:text-gray-200 font-medium group">
+                        <div class="flex items-center gap-3.5">
+                            <div class="w-9 h-9 rounded-lg bg-gray-100 dark:bg-darkbg-hover text-primary flex items-center justify-center text-base group-hover:bg-primary group-hover:text-white transition-colors">
+                                <i class="fas fa-layer-group"></i>
+                            </div>
+                            <span class="text-sm sm:text-base">Catálogo de Serviços & Tabela</span>
+                        </div>
+                        <i class="fas fa-arrow-up-right-from-square text-xs text-gray-400 group-hover:text-primary transition-colors"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Categoria: Conteúdo & Comunidade -->
+            <div class="pt-2">
+                <h2 class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-3 px-1">
+                    Conteúdo & Comunidade
+                </h2>
+
+                <div class="space-y-3">
+                    <a href="#whatsapp-channel" class="link-card w-full p-3.5 rounded-xl bg-white dark:bg-darkbg-card border border-gray-200 dark:border-gray-800/80 flex items-center justify-between hover:border-primary/50 dark:hover:border-primary/50 shadow-sm text-gray-800 dark:text-gray-200 font-medium group">
+                        <div class="flex items-center gap-3.5">
+                            <div class="w-9 h-9 rounded-lg bg-gray-100 dark:bg-darkbg-hover text-primary flex items-center justify-center text-base group-hover:bg-primary group-hover:text-white transition-colors">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <span class="text-sm sm:text-base">Canal Exclusivo no WhatsApp</span>
+                        </div>
+                        <i class="fas fa-arrow-up-right-from-square text-xs text-gray-400 group-hover:text-primary transition-colors"></i>
+                    </a>
+
+                    <a href="#ultimo-projeto" class="link-card w-full p-3.5 rounded-xl bg-white dark:bg-darkbg-card border border-gray-200 dark:border-gray-800/80 flex items-center justify-between hover:border-primary/50 dark:hover:border-primary/50 shadow-sm text-gray-800 dark:text-gray-200 font-medium group">
+                        <div class="flex items-center gap-3.5">
+                            <div class="w-9 h-9 rounded-lg bg-gray-100 dark:bg-darkbg-hover text-primary flex items-center justify-center text-base group-hover:bg-primary group-hover:text-white transition-colors">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <span class="text-sm sm:text-base">Último Projeto Lançado</span>
+                        </div>
+                        <i class="fas fa-arrow-up-right-from-square text-xs text-gray-400 group-hover:text-primary transition-colors"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Categoria: Apoio e Pagamentos -->
+            <div class="pt-2">
+                <h2 class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-3 px-1">
+                    Pagamento & Apoio
+                </h2>
+
+                <button onclick="copyPixKey('000.111.222-33')" class="link-card w-full p-3.5 rounded-xl bg-white dark:bg-darkbg-card border border-dashed border-primary/60 dark:border-primary/60 flex items-center justify-between hover:border-primary shadow-sm text-gray-800 dark:text-gray-200 font-medium group focus:outline-none">
+                    <div class="flex items-center gap-3.5">
+                        <div class="w-9 h-9 rounded-lg bg-primary/10 text-primary flex items-center justify-center text-base group-hover:bg-primary group-hover:text-white transition-colors">
+                            <i class="fas fa-qrcode"></i>
+                        </div>
+                        <div class="text-left">
+                            <span class="block text-sm sm:text-base font-semibold">Copiar Chave PIX</span>
+                            <span class="block text-xs text-gray-500 dark:text-gray-400">Clique para copiar o e-mail / chave PIX</span>
+                        </div>
+                    </div>
+                    <span class="text-xs bg-gray-100 dark:bg-darkbg-hover text-primary font-semibold px-2.5 py-1 rounded-md group-hover:bg-primary group-hover:text-white transition-colors">
+                        <i class="far fa-copy mr-1"></i> Copiar
+                    </span>
+                </button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="w-full text-center py-6 text-xs text-gray-500 dark:text-gray-500 border-t border-gray-200/50 dark:border-gray-800/50 mt-8">
+        <p>© <span id="currentYear"></span> Ana Silva. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 opacity-0 pointer-events-none toast-slide z-50 flex items-center gap-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-4 py-3 rounded-xl shadow-2xl text-sm font-medium border border-gray-700/50 dark:border-gray-200/50">
+        <i class="fas fa-check-circle text-green-400 dark:text-green-600 text-base"></i>
+        <span id="toastMessage">Chave PIX copiada com sucesso!</span>
+    </div>
+
+    <script>
+        // Set current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Theme Toggle Logic
+        const themeToggleBtn = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const htmlElement = document.documentElement;
+
+        // Check stored theme or preference
+        const savedTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+            htmlElement.classList.add('dark');
+            themeIcon.className = 'fas fa-sun text-yellow-400 text-lg';
+        } else {
+            htmlElement.classList.remove('dark');
+            themeIcon.className = 'fas fa-moon text-gray-700 text-lg';
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            if (htmlElement.classList.contains('dark')) {
+                htmlElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+                themeIcon.className = 'fas fa-moon text-gray-700 text-lg';
+            } else {
+                htmlElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+                themeIcon.className = 'fas fa-sun text-yellow-400 text-lg';
+            }
+        });
+
+        // Copy to Clipboard & Toast Functionality
+        let toastTimeout;
+        function copyPixKey(keyText) {
+            // ExecCommand fallback for broader iframe compatibility
+            const tempInput = document.createElement('input');
+            tempInput.value = keyText;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            
+            try {
+                document.execCommand('copy');
+                showToast('Chave PIX copiada para a área de transferência!');
+            } catch (err) {
+                showToast('Não foi possível copiar automaticamente.');
+            }
+            
+            document.body.removeChild(tempInput);
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toastMessage');
+            
+            toastMessage.textContent = message;
+            
+            // Clear any active timeout
+            clearTimeout(toastTimeout);
+            
+            // Show toast
+            toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+            toast.classList.add('opacity-100', 'translate-y-0');
+            
+            // Hide after 3 seconds
+            toastTimeout = setTimeout(() => {
+                toast.classList.remove('opacity-100', 'translate-y-0');
+                toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
